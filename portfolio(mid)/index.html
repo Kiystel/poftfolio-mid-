@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Playfair+Display&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* DEFAULT FONT */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #f5eee6, #e8c9a3);
+}
+
+/* HEADINGS */
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* MENU BUTTON */
+.menu-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: #6b4f4f;
+    color: white;
+    border: none;
+    font-size: 22px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* SIDEBAR (HIDDEN) */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -220px;
+    width: 220px;
+    height: 100%;
+    background: #6b4f4f;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: 0.3s;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar h2 {
+    color: white;
+    text-align: center;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+}
+
+/* NAV PORTFOLIO */
+nav {
+    padding: 20px 70px;
+}
+
+nav h1 {
+    color: #6b4f4f;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+
+.profile-container {
+    width: 330px;
+    height: 420px;
+    background: #f5eee6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 8px solid #c6a27e;
+}
+
+.profile-container img {
+    width: 260px;
+    height: 350px;
+    border-radius: 50%;
+}
+
+.hero-text {
+    max-width: 400px;
+}
+
+.hero-text h2 {
+    font-size: 40px;
+}
+
+.hero-text span {
+    color: #8b5e34;
+}
+
+.btn {
+    display: inline-block;
+    background: #8b5e34;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+/* SECTIONS */
+section {
+    padding: 60px;
+}
+
+h2 {
+    color: #6b4f4f;
+    margin-bottom: 15px;
+}
+
+/* GRID */
+.skills-grid, .projects-grid, .cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* RESUME */
+.resume-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* IMAGE */
+.cert-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* RESUME CARD */
+.resume-card {
+    background: white;
+    padding: 20px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.resume-card h3 {
+    color: #8b5e34;
+    margin-bottom: 8px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- MENU BUTTON -->
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <h2>MENU</h2>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<!-- NAV -->
+<nav>
+    <h1>PORTFOLIO</h1>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="home">
+    <div class="profile-container">
+        <img src="profile.jpg">
+    </div>
+
+    <div class="hero-text">
+        <h2>Hey I'm <span>Kyrstell Rose Comonsad</span></h2>
+        <h3>I'm a <span>Student</span></h3>
+        <p>I am passionate about learning and growing in my chosen field.</p>
+        <a href="#contact" class="btn">Hire Me</a>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>Hi! I’m Kyrstell Rose Comonsad, a dedicated and hardworking individual with a strong passion for continuous learning. I am currently on my journey in the field of computer science, where I am developing my skills and expanding my knowledge, particularly in technology and photo editing. I am highly motivated to grow, gain valuable experience, and contribute meaningfully to future opportunities. I am also driven by my goal to support and provide for my family while building a successful and fulfilling career.</p>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+    <h2>Education</h2>
+    <div class="skills-grid">
+
+        <div class="card">
+            <h3>Manga Elementary School</h3>
+            <p>2015–2016</p>
+        </div>
+
+        <div class="card">
+            <h3>Lanao del Norte National Comprehensive High School</h3>
+            <p>2021–2022</p>
+        </div>
+
+        <div class="card">
+            <h3>Tangub City Global College</h3>
+            <p>2022–Present</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+
+        <div class="card">
+            <img src="project.jpg" class="cert-img">
+            <p>I designed engaging social media graphics to promote our iced café products.</p>
+        </div>
+
+        <div class="card">
+            <p>System Design</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+    <h2>Certifications</h2>
+    <div class="cert-grid">
+
+        <div class="card">
+            <img src="cert1.jpg" class="cert-img">
+            <p>The OJT Advantage</p>
+        </div>
+
+        <div class="card">
+            <img src="cert2.jpg" class="cert-img">
+            <p>Reverse Pitching</p>
+        </div>
+
+        <div class="card">
+            <img src="cert3.jpg" class="cert-img">
+            <p>AI Integration</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- RESUME -->
+<section id="resume">
+    <h2>Resume</h2>
+
+    <div class="resume-grid">
+
+        <div class="resume-card">
+            <h3>Name</h3>
+            <p>Kyrstell Rose Comonsad</p>
+        </div>
+
+        <div class="resume-card">
+            <h3>Email</h3>
+            <p>krystellcomonsad@gmail.com</p>
+        </div>
+
+        <div class="resume-card">
+            <h3>Education</h3>
+            <p>Manga Elementary (2015–2016)<br>
+            Lanao del Norte National Comprehensive High School (2021–2022)<br>
+            Tangub City Global College (2022–Present)</p>
+        </div>
+
+        <div class="resume-card">
+            <h3>Projects</h3>
+            <p>Social Media Designs, System Design</p>
+        </div>
+
+        <div class="resume-card">
+            <h3>Skills</h3>
+            <p>Graphic Design, Photo Editing, Creativity</p>
+        </div>
+
+        <div class="resume-card">
+            <h3>Experience</h3>
+            <p>Assisted in the handling and organization of documents in the school Planning Office.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: krystellcomonsad@gmail.com</p>
+    <p>Facebook: Kyrstell Rose Comonsad</p>
+</section>
+
+<!-- SCRIPT -->
+<script>
+function toggleMenu() {
+    document.querySelector('.sidebar').classList.toggle('active');
+}
+
+document.querySelectorAll('.sidebar a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('.sidebar').classList.remove('active');
+    });
+});
+</script>
+
+</body>
+</html>
